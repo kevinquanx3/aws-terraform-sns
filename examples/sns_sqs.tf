@@ -1,4 +1,5 @@
 provider "aws" {
+  version = "~> 2.0"
   region = "us-west-2"
 }
 
@@ -13,10 +14,11 @@ resource "aws_sqs_queue" "my_sqs" {
 }
 
 module "sns_sqs" {
-  source     = "git@github.com:rackspace-infrastructure-automation/aws-terraform-sns//?ref=v0.0.2"
+  source     = "git@github.com:rackspace-infrastructure-automation/aws-terraform-sns//?ref=tf_0.12-upgrade"
   topic_name = "${random_string.sqs_rstring.result}-my-example-topic"
 
-  create_subscription_1 = true
+  create_subscription_1 = 1
   protocol_1            = "sqs"
-  endpoint_1            = "${aws_sqs_queue.my_sqs.arn}"
+  endpoint_1            = aws_sqs_queue.my_sqs.arn
 }
+
