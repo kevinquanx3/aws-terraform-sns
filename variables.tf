@@ -6,8 +6,8 @@ variable "topic_name" {
 # Subcription 1
 variable "create_subscription_1" {
   description = "Set to true to enable subscription."
-  type        = string
-  default     = false
+  type        = number
+  default     = 0
 }
 
 variable "protocol_1" {
@@ -28,8 +28,8 @@ variable "endpoint_1" {
 # Subscription 2
 variable "create_subscription_2" {
   description = "Set to true to enable subscription."
-  type        = string
-  default     = false
+  type        = number
+  default     = 0
 }
 
 variable "protocol_2" {
@@ -50,8 +50,8 @@ variable "endpoint_2" {
 # Subscription 3
 variable "create_subscription_3" {
   description = "Set to true to enable subscription."
-  type        = string
-  default     = false
+  type        = number
+  default     = 0
 }
 
 variable "protocol_3" {
@@ -72,8 +72,8 @@ variable "endpoint_3" {
 # Subscription 4
 variable "create_subscription_4" {
   description = "Set to true to enable subscription."
-  type        = string
-  default     = false
+  type        = number
+  default     = 0
 }
 
 variable "protocol_4" {
@@ -94,8 +94,8 @@ variable "endpoint_4" {
 # Subscription 5
 variable "create_subscription_5" {
   description = "Set to true to enable subscription."
-  type        = string
-  default     = false
+  type        = number
+  default     = 0
 }
 
 variable "protocol_5" {
